@@ -1,0 +1,17 @@
+.customwidth {
+    width: 100%;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.customheight {
+    height: calc(100vh - 56px)
+}
+
+@media screen and (min-width: 992px) {
+    .customwidth {
+        width: 50%;
+    }
+}
