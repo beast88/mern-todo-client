@@ -6,7 +6,7 @@ const TodoForm = (props) => {
 
   const onSubmit = () => {
     if(title.length > 0){
-      axios.post('/todo/', 
+      axios.post('https://mern-todo-welshwebdev.herokuapp.com/todo/', 
         {title: title},
         {headers: {token: localStorage.getItem('token')}})
         .then(res => { 

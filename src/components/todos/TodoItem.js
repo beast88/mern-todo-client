@@ -4,7 +4,7 @@ import axios from 'axios'
 const TodoItem = (props) => {
 
   const markCompleted = (todo) => {
-    axios.put(`/todo/${todo._id}`, {},  
+    axios.put(`https://mern-todo-welshwebdev.herokuapp.com/todo/${todo._id}`, {},  
     {headers: {token: localStorage.getItem('token')}})
       .then(res => {
         if(res.status === 200){

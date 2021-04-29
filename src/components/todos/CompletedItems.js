@@ -4,7 +4,7 @@ import axios from 'axios'
 const CompletedItems = (props) => {
 
   const handleDelete = (todo) => {
-    axios.delete(`/todo/${todo._id}`,
+    axios.delete(`https://mern-todo-welshwebdev.herokuapp.com/todo/${todo._id}`,
       {headers: {token: localStorage.getItem('token')}})
         .then(res => {
           props.updateCompletedList(res.data.todo)

@@ -12,7 +12,7 @@ const Dashboard = (props) => {
   const [completedSelected, setCompletedSelected] = useState(false)
 
   useEffect(() => {
-    axios.get('/users/user',
+    axios.get('https://mern-todo-welshwebdev.herokuapp.com/users/user',
     {headers: 
       {token: localStorage.getItem('token')}
     })
@@ -20,7 +20,7 @@ const Dashboard = (props) => {
   }, [])
 
   useEffect(() => {
-    axios.get('/todo',
+    axios.get('https://mern-todo-welshwebdev.herokuapp.com/todo',
     {headers:
       {token: localStorage.getItem('token')}
     })

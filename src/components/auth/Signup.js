@@ -17,12 +17,12 @@ const Signup = (props) => {
     }, [password, confirmPassword])
 
     const handleSubmit = () => {
-        axios.post('/users/signup', {
+        axios.post('https://mern-todo-welshwebdev.herokuapp.com/users/signup', {
             username: username,
             password: password
         }).then(res => {
             if(res.status === 200) {
-                axios.post('/users/login', {
+                axios.post('https://mern-todo-welshwebdev.herokuapp.com/users/login', {
                     username: username,
                     password: password
                 }).then(res => {
